@@ -1,0 +1,101 @@
+ /* --- ANNOUNCEMENT PAGE SPECIFIC STYLES (Optional additions for refinement) --- */
+        .search-controls {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+        .search-controls .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .search-controls label {
+            font-weight: 700;
+            color: #004c99;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .search-controls select, .search-controls input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%; /* Default to full width in column */
+            max-width: 400px; /* Limit max width for desktop view */
+            font-size: 1em;
+        }
+        .filter-group {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .document-grid {
+            padding: 50px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .document-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .document-preview {
+            height: 200px; /* Fixed height for consistent card size */
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* Using a placeholder for the document image/preview */
+        }
+        .document-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .document-content {
+            padding: 15px;
+        }
+        .document-content h4 {
+            color: #004c99;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            height: 10em; /* Ensure title height consistency */
+            overflow: hidden;
+        }
+        .document-content p {
+            color: #666;
+            font-size: 0.9em; 
+            margin-bottom: 15px;
+        }
+        .document-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 10px;
+        }
+        .document-meta span {
+            color: #dc3545; /* Red for category/status */
+            font-weight: 500;
+            font-size: 0.85em;
+        }
+        .document-meta a {
+            color: #6d77cf; /* Green for link/action */
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .search-controls .container {
+                flex-direction: column;
+            }
+        }

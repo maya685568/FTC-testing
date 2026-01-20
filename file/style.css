@@ -1,0 +1,219 @@
+/* General Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+     font-family: "Siemreap", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+
+.nav-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    width: 90%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #004c99; /* Deep institutional blue */
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #333;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('placeholder-lab.jpg') center/cover no-repeat;
+    background-color: #004c99; /* Fallback color */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- General Section Styles --- */
+.section {
+    padding: 60px 0;
+}
+
+.about-section {
+    background-color: #e9ecef;
+}
+
+.research-section {
+    background-color: #ffffff;
+}
+
+.section h3 {
+    text-align: center;
+    color: #004c99;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+/* --- Card Grid for Research --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding-bottom: 10px;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-menu li {
+        margin: 0;
+        border-top: 1px solid #eee;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #333;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+}

@@ -1,0 +1,111 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3995d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.brand-header {
+    text-align: center;
+    margin-bottom: 30px; /* Space between logo and buttons */
+}
+
+.brand-logo {
+    width: 350px;          /* Limit logo width */
+    height: 180px;         /* Limit logo height */
+    object-fit: contain;
+    border-radius: 10px;  /* Optional: rounds the logo corners */
+    margin-bottom: 10px;
+}
+
+.brand-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #111827;
+}
+
+.brand-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #6b7280; /* Subtle gray text */
+}
+
+/* Ensure the main-wrapper handles the top alignment better */
+.main-wrapper {
+    width: 100%;
+    max-width: 450px; /* Tightened the size limit slightly */
+    padding: 40px 20px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Optional: card look */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn i, .btn img {
+    font-size: 20px;
+    margin-right: 12px;
+    width: 20px; /* Ensures consistent alignment */
+    text-align: center;
+}
+
+/* Brand Colors */
+.btn-google {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #fce4e4; /* Light pinkish border like image */
+}
+
+.btn-linkedin {
+    background-color: #2d66f2;
+    color: white;
+}
+
+.btn-x {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-facebook {
+    background-color: #1e42b3;
+    color: white;
+}
+
+.btn-github {
+    background-color: #161b22;
+    color: white;
+}
+
+.btn-apple {
+    background-color: #24292f;
+    color: white;
+}
